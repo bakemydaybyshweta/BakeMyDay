@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --playfair-display: "Playfair Display", serif;
+  --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;
+
+  --primary-color: #77458e;
+  --secondary-color: #121212;
+
+  --black-200: #020202;
+  --black-300: #333333;
+  --black-400: #1f1e31;
+  --black-500: #555555;
+  --gray-100: #888888;
+
+  --color-white: #fff;
+  --color-creamson: #fff0de;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Kanit", sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: var(--color-white);
+}
+
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #252626ac;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cake__subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+
+  color: var(--primary-color);
+  opacity: 0.8;
+
+  letter-spacing: -0.01em;
+}
+
+.cake__title {
+  font-size: 52px;
+  font-weight: 600;
+  font-family: var(--playfair-display);
+
+  color: var(--secondary-color);
+
+  margin-top: 16px;
+}
+
+.cake__description {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: var(--plus-jakarta-sans);
+  line-height: 36px;
+  letter-spacing: -0.01em;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  margin: 32px 0px;
+}
