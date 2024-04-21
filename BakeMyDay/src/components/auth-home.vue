@@ -34,9 +34,8 @@
       </div>
     </section>
     <About/>
-    <Popular/>
-    <Trending/>
     <Contact/>
+    <Trending/>
     <Foot/>
   </template>
   

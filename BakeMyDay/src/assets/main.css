@@ -144,10 +144,10 @@ a{
 
     object-fit: contain;
   }
-
+/* 
   .about-us__image div {
     padding: 32px;
-  }
+  } */
 
   .about-us__button {
     top: 44%;
@@ -183,7 +183,7 @@ a{
 /* END: header media queries */
 
 /* START: hero media queries */
- @media screen and (max-width: 1060px) {
+ /* @media screen and (max-width: 1060px) {
   .hero {
     flex-direction: column;
   }
@@ -226,7 +226,7 @@ a{
   .hero-content__testimonial {
     padding: 32px;
   }
-}
+} */
 /* END: hero media queries */
 
 /* START: popular media queries */

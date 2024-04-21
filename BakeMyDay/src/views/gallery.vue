@@ -1,21 +1,21 @@
-<template>
+<!-- <template>
         <div class="all-gallery">
         <div class="container-gallery">
             <div class="row-items-gallery">
 
               <div class="container-gallery-box">
                 <div class="container-gallery-img">
-                  <img src="../assets/cake-stock.jpg"/>
+                  <img src="../assets/gallery2.png"/>
                 </div>
               </div>
               <div class="container-gallery-box">
                 <div class="container-gallery-img">
-                  <img src="../assets/cake-stock.jpg"/>
+                  <img src="../assets/gallery2.png"/>
                 </div>
               </div>
               <div class="container-gallery-box">
                 <div class="container-gallery-img">
-                  <img src="../assets/cake-stock.jpg"/>
+                  <img src="../assets/gallery2.png"/>
                 </div>
               </div>
 
@@ -135,4 +135,81 @@
     
         }
      }
-    </style>
+    </style> -->
+
+<template>
+  <div class="row">
+  <div class="column">
+    <img src="../assets/gallery1.png">
+    <img src="../assets/gallery4.png">
+    <img src="../assets/gallery3.png">
+    <img src="../assets/gallery4.png">
+    <img src="../assets/gallery6.png">
+    <img src="../assets/gallery7.png">
+    <img src="../assets/gallery4.png">
+  </div>
+  <div class="column">
+    <img src="../assets/gallery2.png">
+    <img src="../assets/gallery5.png">
+    <img src="../assets/gallery1.png">
+    <img src="../assets/gallery7.png">
+    <img src="../assets/gallery6.png">
+    <img src="../assets/gallery2.png">
+  </div>
+  <div class="column">
+    <img src="../assets/gallery3.png">
+    <img src="../assets/gallery6.png">
+    <img src="../assets/gallery3.png">
+    <img src="../assets/gallery4.png">
+    <img src="../assets/gallery6.png">
+    <img src="../assets/gallery7.png">
+    <img src="../assets/gallery4.png">
+  </div>
+  <div class="column">
+    <img src="../assets/gallery4.png">
+    <img src="../assets/gallery7.png">
+    <img src="../assets/gallery1.png">
+    <img src="../assets/gallery7.png">
+    <img src="../assets/gallery6.png">
+    <img src="../assets/gallery2.png">
+  </div>
+</div>
+</template>
+
+<style>
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+</style>

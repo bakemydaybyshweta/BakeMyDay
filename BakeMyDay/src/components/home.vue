@@ -13,13 +13,14 @@
   
           <div class="hero-content__buttons">
            <router-link to="/login"> <button class="hero-content__order-button">Log In</button></router-link>
+           <router-link to="/signup"> <button class="hero-content__order-button2">Sign up</button></router-link>
           </div>
           <!-- <div class="hero-content__buttons">
             <button @click="handleLogOut" class="hero-content__order-button">Log Out</button>
           </div> -->
         </div>
   
-        <div class="hero-content__testimonial" data-aos="fade-up">
+        <div class="hero-content__testimonial" >
           <div class="hero-content__customer flex-center">
             <h4>18<span>k+</span></h4>
             <p>Happy Customers</p>
@@ -34,9 +35,8 @@
       </div>
     </section>
     <About/>
-    <Popular/>
-    <Trending/>
     <Contact/>
+    <Trending/>
     <Foot/>
   </template>
   
@@ -169,19 +169,32 @@ export default {
     margin: 41px 0 0 0px;
     display: flex;
     flex-wrap: wrap;
-    gap: 36px;
+    /* gap: 36px; */
   }
   
   .hero-content__order-button {
     padding: 20px;
-    border-radius: 36px;
+    border-radius: 36px 0px 0px 36px;
     min-width: 212px;
     outline: none;
     border: none;
     background: var(--secondary-color);
-  
     cursor: pointer;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 23px;
+  }
   
+  .hero-content__order-button2 {
+    border: 1px gray;
+    border-style: none none none solid;
+    padding: 20px;
+    border-radius: 0px 36px 36px 0px;
+    min-width: 212px;
+    outline: none;
+    background: var(--secondary-color);
+    cursor: pointer;
     color: #fff;
     font-weight: 500;
     font-size: 18px;
@@ -240,6 +253,57 @@ export default {
     color: var(--secondary-color);
     opacity: 0.8
   }
+ @media screen and (max-width: 1060px) {
+  /* .hero {
+    flex-direction: column;
+  }
+
+  .hero-image img {
+    width: 80vh;
+    transform: matrix(1, 0.05, 0, 1.25, 0, 0) !important;
+  } */
+  .hero-content-info h1 {
+    font-size: 40px;
+  }
+
+  .hero-content-info p {
+    font-size: 20px;
+  }
+} 
+
+@media screen and (max-width: 750px) {
+  .hero-image h2 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero-image h2 {
+    font-size: 40px;
+    line-height: 60px;
+  }
+
+  .hero-content-info {
+    padding: 32px;
+  }
+
+  .hero-content-info h1 {
+    font-size: 60px;
+  }
+
+  .hero-content-info p {
+    margin: 32px 0;
+  }
+
+  .hero-content__buttons {
+    margin: 41px 0;
+  }
+
+  .hero-content__testimonial {
+    padding: 32px;
+  }
+}
 
   
 

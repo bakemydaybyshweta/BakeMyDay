@@ -8,31 +8,31 @@
                  <div class="trending__icon flex-center">
                    <img src="../assets/check.svg" alt="check" />
                  </div>
-                 <p>Service 1</p>
+                 <p>Home-Baked</p>
                </li>
                <li>
                  <div class="trending__icon flex-center">
                    <img src="../assets/check.svg" alt="check" />
                  </div>
-                 <p>Service 2</p>
+                 <p>High-Quality</p>
                </li>
                <li>
                  <div class="trending__icon flex-center">
                    <img src="../assets/check.svg" alt="check" />
                  </div>
-                 <p>Service 3</p>
+                 <p>Custom Cakes</p>
                </li>
                <li>
                  <div class="trending__icon flex-center">
                    <img src="../assets/check.svg" alt="check" />
                  </div>
-                 <p>Service 4</p>
+                 <p>Fresh Flavours</p>
                </li>
                <li>
                  <div class="trending__icon flex-center">
                    <img src="../assets/check.svg" alt="check" />
                  </div>
-                 <p>Service 5</p>
+                 <p>Home Delivery</p>
                </li>
                <li>
                  <div class="trending__icon flex-center">
@@ -132,9 +132,6 @@
      position: relative;
      padding: 32px 64px;
      background-color: var(--color-white);
-     background-repeat: no-repeat;
-     background-size: contain;
-     background-position: center;
    }
    
    .trending__image img {

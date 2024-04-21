@@ -7,31 +7,31 @@
         <li class="list">
           <router-link to="/">
             <span class="icon"><i class="fa-solid fa-chart-pie"></i></span>
-            <span class="title"><b>Analytics</b></span>
+            <span class="title">Analytics</span>
           </router-link>
         </li>
         <li class="list">
           <router-link to="/adminorder">
             <span class="icon"><i class="fa-solid fa-cart-shopping"></i></span>
-            <span class="title"><b>Orders</b></span>
+            <span class="title">Orders</span>
           </router-link>
         </li>
         <li class="list">
           <router-link to="/adminproduct">
             <span class="icon"><i class="fa-solid fa-cake-candles"></i></span>
-            <span class="title"><b>Products</b></span>
+            <span class="title">Products</span>
           </router-link>
         </li>
         <li class="list">
           <router-link to="/user">
             <span class="icon"><i class="fa-solid fa-users"></i></span>
-            <span class="title"><b>Users</b></span>
+            <span class="title">Users</span>
           </router-link>
         </li>
         <li class="list">
           <router-link to="/history">
             <span class="icon"><i class="fa-solid fa-clock-rotate-left"></i></span>
-            <span class="title"><b>History</b></span>
+            <span class="title">History</span>
           </router-link>
         </li>
       </ul>
@@ -122,6 +122,7 @@
     height: 60px;
     line-height: 60px;
     white-space: nowrap;
+    font-weight: 500;
 }
 
    </style>

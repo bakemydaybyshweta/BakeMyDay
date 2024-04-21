@@ -1,4 +1,5 @@
 {
+  "homepage":"https://Danishkhan.github.io/Bake-My-Day",
   "name": "bakemyday",
   "version": "0.0.0",
   "private": true,
@@ -6,7 +7,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "dependencies": {
     "aos": "^2.3.4",
@@ -17,6 +20,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.3",
+    "gh-pages": "^6.1.1",
     "vite": "^5.0.11"
   }
 }

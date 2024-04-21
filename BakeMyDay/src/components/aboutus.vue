@@ -6,7 +6,7 @@
      </div>
 
      <button class="about-us__button">
-       Learn More
+       <a href="#contact">Learn More</a>
        <img src="../assets/arrow-up-right.svg" alt="learn more" />
      </button>
 
@@ -84,6 +84,7 @@ z-index: 100;
 .about-us__button img {
 object-fit: contain;
 margin-left: 32px;
+transform: rotate(135deg);
 }
 
 .about-us__content {

@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div class="wrapper">
         <div class="inner">
             <img src="" alt="" class="image-1">
@@ -33,7 +33,93 @@
 
 <script>
 export default {}
+</script> -->
+<template>
+    <div class="wrapper">
+        <div class="inner">
+            <img src="" alt="" class="image-1">
+            <form @submit.prevent="createUser">
+                <img src="../assets/full-logo-dark.png" alt="" style="margin-bottom: 20px; margin-left: 30px;">
+                <h3>New Account?</h3>
+                <div class="form-holder">
+                    <span class="lnr"><i class="fa-solid fa-user"></i></span>
+                    <input type="text" class="form-control" v-model="username" placeholder="Username">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr"><i class="fa-solid fa-lock"></i></span>
+                    <input type="password" class="form-control" v-model="password" placeholder="Password">
+                </div>
+                <div class="form-holder">
+                    <span class="lnr"><i class="fa-solid fa-envelope"></i></span>
+                    <input type="text" class="form-control" v-model="email" placeholder="Mail">
+                </div>
+                <button type="submit">
+                    <span>Sign up</span>
+                </button>
+                <p>Already indulged in our delicious treats? <router-link to="/login" exact><span class="cross-link">Log in</span></router-link> and try more!</p>
+            </form>
+            <img src="" alt="" class="image-2">
+        </div>
+    </div>
+</template>
+
+<script>
+import axios from 'axios';
+axios.defaults.xsrfCookieName = 'csrftoken';
+axios.defaults.xsrfHeaderName = 'X-CSRFTOKEN';
+
+export default {
+    data() {
+        return {
+            username: '',
+            email: '',
+            password: ''
+        }
+    },
+    methods: {
+        async createUser() {
+            try {
+                const userData = {
+                    username: this.username,
+                    email_id: this.email,
+                    password: this.password
+                };
+
+                const csrftoken = this.getCookie('csrftoken'); 
+                const response = await axios.post('http://127.0.0.1:8000/users/', userData, {
+                    headers: {
+                        'X-CSRFTOKEN': csrftoken
+                    }
+                });
+
+                console.log(response.data);
+                // Handle success response, e.g., show success message, redirect, etc.
+                // Redirect to login page
+                this.$router.push('/login');
+            } catch (error) {
+                console.error(error);
+                // Handle error response, e.g., show error message
+            }
+        },
+    getCookie(name) {
+        var cookieValue = null;
+        if (document.cookie && document.cookie !== '') {
+            var cookies = document.cookie.split(';');
+            for (var i = 0; i < cookies.length; i++) {
+                var cookie = cookies[i].trim();
+                if (cookie.substring(0, name.length + 1) === (name + '=')) {
+                    cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                    break;
+                }
+            }
+        }
+        return cookieValue;
+    }
+    }
+}
+
 </script>
+
 <style>
 input,
 textarea,
@@ -42,7 +128,11 @@ button {
     font-family: var(--plus-jakarta-sans);
 }
 
-body {
+body{
+    max-width: 100%;
+}
+
+.wrapper{
     background: linear-gradient(rgba(0,0,0,0.367),rgba(0,0,0,0.429)),url("../assets/loging-bg.png"),var(--color-creamson);
     background-position: center;
     background-size: cover;

@@ -1,5 +1,5 @@
-<template>
-    <section class="subscription flex-center" id="services">
+<template >
+    <section class="subscription flex-center" id="contact">
           <h2 data-aos="flip-down">How to find us?</h2>
     <div class="contact-main">
         <div class="contact-text" data-aos="fade-down">

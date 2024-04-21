@@ -49,9 +49,11 @@ export default {
                 console.log(response.data); // Handle successful login response
                 // Extract session ID from the response
                 const sessionId = response.data.session_id;
+                const userId = response.data.user_id;
 
                 // Save session ID to sessionStorage
                 sessionStorage.setItem('session_id', sessionId);
+                sessionStorage.setItem('user_id', userId);
                 
                 // Redirect to home or handle success action
                 this.$router.push('/auth-home');
@@ -90,7 +92,11 @@ button {
     font-family: var(--plus-jakarta-sans);
 }
 
-body {
+body{
+    max-width: 100%;
+}
+
+.wrapper{
     background: linear-gradient(rgba(0,0,0,0.367),rgba(0,0,0,0.429)),url("../assets/loging-bg.png"),var(--color-creamson);
     background-position: center;
     background-size: cover;
